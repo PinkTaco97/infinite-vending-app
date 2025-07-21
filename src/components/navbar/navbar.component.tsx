@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-background max-w-7xl m-5 px-4 rounded-full sm:px-6 lg:px-8">
+      <div className="bg-background transition-colors duration-1000  max-w-7xl m-5 px-4 rounded-full sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left: Logos */}
           <div className="flex items-center space-x-2">
@@ -40,11 +40,11 @@ export default function Navbar() {
           </div>
 
           {/* Right: Desktop Menu */}
-          <div className="hidden md:flex space-x-6 align-items-center justify-center bg-gray-100 dark:bg-gray-900 rounded-full px-4 py-2">
-            <Link href="/suggestions" className="text-text hover:text-blue-600">
+          <div className="hidden md:flex space-x-6 align-items-center justify-center rounded-full px-4 py-2">
+            <Link href="/suggestions" className="text-text hover:text-primary">
               Suggestions
             </Link>
-            <Link href="/contact" className="text-text hover:text-blue-600">
+            <Link href="/contact" className="text-text hover:text-primary">
               Contact
             </Link>
             <ToggleDarkLight />
