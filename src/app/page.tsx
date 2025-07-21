@@ -13,17 +13,17 @@ export default function Home() {
         <div
           className={`snap-start w-screen h-screen flex items-center justify-center bg-cover bg-center rounded-lg shadow-lg content-center
           bg-gradient-to-b ${gradientStyle}`}
-          // style={{ backgroundImage: "url('/bg.jpg')" }}
+          style={{ backgroundImage: "url('/bg.jpg')" }}
         >
           <div className="container mx-auto p-6 text-center">
-            <Image
+            {/* <Image
               className="mx-auto object-contain"
               src="/logo.svg"
               alt="logo"
               width={750}
               height={750}
               priority
-            />
+            /> */}
 
             {/* <Image
               src="/logo-text.svg"
@@ -38,7 +38,7 @@ export default function Home() {
         <div
           className={`snap-start flex flex-col items-center justify-start content-center py-5 bg-cover bg-center min-h-screen
           bg-gradient-to-t ${gradientStyle}`}
-          // style={{ backgroundImage: "url('/bg-2.jpg')" }}
+          style={{ backgroundImage: "url('/bg-2.jpg')" }}
         ></div>
       </div>
     </main>
