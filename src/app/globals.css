@@ -12,7 +12,7 @@
 }
 
 .dark {
-  --background: #111;
+  --background: #0d1b2a;
   --foreground: #ededed;
   --text: #ffffff;
   --text-secondary: #eeeeee;
@@ -20,6 +20,19 @@
   --primary-hover: #0056b3;
   --secondary: #ffea00;
   --secondary-hover: #ffdd00;
+}
+
+@theme {
+  --animate-wiggle: wiggle 0.5s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
 }
 
 @theme inline {

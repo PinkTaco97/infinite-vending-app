@@ -1,18 +1,26 @@
+"use client";
+
 // Next.js
 import Image from "next/image";
 
 // Components.
 import { Navbar } from "@/components";
 
+// Hooks
+import { useTheme } from "@/hooks";
+
 export default function Home() {
+  const { theme } = useTheme();
+
   const gradientStyle = "from-stone-800 to-stone-900"; //from-slate-900 to-slate-800";
   return (
     <main className="overflow-hidden">
       <Navbar />
       <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden">
         <div
-          className={`snap-start w-screen h-screen flex items-center justify-center bg-cover bg-center shadow-lg content-center
-          bg-gradient-to-b ${gradientStyle}`}
+          className={`snap-start w-screen h-screen flex items-center justify-center bg-cover bg-center shadow-lg content-center transition duration-300 ${
+            theme === "dark" ? "brightness-75" : ""
+          } //bg-gradient-to-b ${gradientStyle}`}
           style={{ backgroundImage: "url('/bg-3.jpg')" }}
         >
           <div className="container mx-auto p-6 text-center">
@@ -36,7 +44,9 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`snap-start flex flex-col items-center justify-start content-center py-5 bg-cover bg-center min-h-screen
+          className={`snap-start flex flex-col items-center justify-start content-center py-5 bg-cover bg-center min-h-screen transition duration-300 ${
+            theme === "dark" ? "brightness-75" : ""
+          }
           bg-gradient-to-t ${gradientStyle}`}
           style={{ backgroundImage: "url('/bg-4.jpg')" }}
         ></div>
