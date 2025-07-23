@@ -19,7 +19,7 @@ export default function Home() {
       <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden">
         <div
           className={`snap-start w-screen h-screen flex items-center justify-center bg-cover bg-center shadow-lg content-center transition duration-300 ${
-            theme === "dark" ? "brightness-75" : ""
+            theme === "dark" ? "brightness-50" : ""
           } //bg-gradient-to-b ${gradientStyle}`}
           style={{ backgroundImage: "url('/bg-3.jpg')" }}
         >
