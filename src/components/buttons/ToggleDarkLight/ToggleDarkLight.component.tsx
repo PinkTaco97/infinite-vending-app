@@ -17,11 +17,11 @@ export default function ToggleDarkLight() {
 
   return (
     <div
-      className={`bg-gradient-to-r  transition duration-300 ${
+      className={`bg-gradient-to-r  transition-all duration-300 ${
         theme === "dark"
           ? "from-red-500 to-orange-500"
           : "from-slate-900 to-slate-700"
-      } p-1 rounded-full focus:outline-none hover:cursor-pointer hover:animate-wiggle`}
+      } p-2 rounded-full focus:outline-none hover:cursor-pointer hover:animate-wiggle hover:p-2.5`}
       onClick={() => {
         toggleTheme();
       }}
