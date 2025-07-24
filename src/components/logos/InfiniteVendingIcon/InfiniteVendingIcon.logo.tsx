@@ -18,7 +18,7 @@ export default function InfiniteVendingIconLogo(
         </clipPath>
       </defs>
       <g id="06d6e70414">
-        <g clip-rule="nonzero" clip-path="url(#f8527d2431)">
+        <g clipRule="nonzero" clipPath="url(#f8527d2431)">
           <path
             style={{
               stroke: "none",

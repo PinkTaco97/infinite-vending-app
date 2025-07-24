@@ -1,8 +1,22 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .parallax {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
+
+:root {
+  --brand-v: #7fbb00;
+}
+
 .light {
   --background: #ffffff;
-  --foreground: #171717;
+  --background-2: #eeeeee;
+  --background-3: #dddddd;
+  --foreground: #dddddd;
   --text: #171717;
   --text-secondary: #6c757d;
   --primary: #007bff;
@@ -13,7 +27,9 @@
 
 .dark {
   --background: #0d1b2a;
-  --foreground: #ededed;
+  --background-2: #1b2631;
+  --background-3: #313131;
+  --foreground: #313131;
   --text: #ffffff;
   --text-secondary: #eeeeee;
   --primary: #007bff;
