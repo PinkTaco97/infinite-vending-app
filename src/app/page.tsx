@@ -18,11 +18,12 @@ export default function Home() {
 
   const gradientStyle = "from-stone-800 to-stone-900";
   const brandSize = 150;
+  const brandSizeSmall = 20;
 
   return (
     <main className="overflow-hidden">
       <Navbar />
-      <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden">
+      <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
         {/* Hero Section */}
         <section
           className={`snap-start w-screen h-screen  bg-cover bg-center shadow-lg text-white text-center
@@ -40,11 +41,22 @@ export default function Home() {
               }
             `}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-10 text-shadow-2xs font-DMSerif">
+            <h1 className="text-4xl md:text-6xl font-bold mb-10">
               {/* Vending Machines for Modern Workspaces */}
-              The Future of Vending.
+              {/* The Future of Vending.<br />Delivered Today. */}
+              Your trusted vending partner for
               <br />
-              Delivered Today.
+              <span className="bg-gradient-to-r from-lime-400 to-green-500 bg-clip-text text-transparent">
+                quality
+              </span>
+              ,{" "}
+              <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+                service
+              </span>{" "}
+              & {/* from-violet-600 to-indigo-600 */}
+              <span className="bg-gradient-to-r from-yellow-300 to-amber-500 bg-clip-text text-transparent">
+                convenience
+              </span>
             </h1>
             {/* <p className="text-lg md:text-xl mb-6">
               Reliable, contactless vending machines tailored for your business
@@ -112,63 +124,65 @@ export default function Home() {
               }
             `}
           >
-            <h2 className="text-3xl font-bold mb-6 text-white">
-              Brands we Stock
+            <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-white text-center">
+              Your Favorite Brands
+              <br />
+              Always Stocked
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl">
+            <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 sm:gap-6 max-w-4xl">
               <Image
                 src="/brands/Coke.png"
                 alt="Product 1"
                 width={brandSize}
                 height={brandSize}
-                className="bg-background rounded-full shadow-lg bg-cover bg-center "
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
               />
               <Image
                 src="/brands/Pepsi.png"
                 alt="Product 2"
                 width={brandSize}
                 height={brandSize}
-                className="bg-background rounded-full shadow-lg bg-cover bg-center "
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
               />
               <Image
                 src="/brands/Smiths.png"
                 alt="Product 3"
-                className="bg-background rounded-full shadow-lg bg-cover bg-center "
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
                 width={brandSize}
                 height={brandSize}
               />
               <Image
                 src="/brands/Red Rock Deli.png"
                 alt="Product 3"
-                className="bg-background rounded-full shadow-lg bg-cover bg-center"
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
                 width={brandSize}
                 height={brandSize}
               />
               <Image
                 src="/brands/Cadbury.png"
                 alt="Product 3"
-                className="bg-background rounded-full shadow-lg bg-cover bg-center "
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
                 width={brandSize}
                 height={brandSize}
               />
               <Image
                 src="/brands/V Energy.png"
                 alt="Product 3"
-                className="bg-background rounded-full shadow-lg bg-cover bg-center"
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
                 width={brandSize}
                 height={brandSize}
               />
               <Image
                 src="/brands/Monster.png"
                 alt="Product 3"
-                className="bg-background rounded-full shadow-lg bg-cover bg-center"
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
                 width={brandSize}
                 height={brandSize}
               />
               <Image
                 src="/brands/Mother.png"
                 alt="Product 3"
-                className="bg-background rounded-full shadow-lg bg-cover bg-center"
+                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
                 width={brandSize}
                 height={brandSize}
               />
@@ -177,7 +191,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white px-6 text-center transition duration-300">
+        {/* <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white px-6 text-center transition duration-300">
           <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
           <ul className="list-disc max-w-xl space-y-2 text-lg">
             <li>24/7 Monitoring</li>
@@ -186,7 +200,7 @@ export default function Home() {
             <li>Fast Restocking Guarantee</li>
             <li>Local SEQ Support</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Contact Form */}
         {/* <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white px-6 text-center transition duration-300">
