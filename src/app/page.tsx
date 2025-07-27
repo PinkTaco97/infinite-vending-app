@@ -1,11 +1,11 @@
 "use client";
 
 // React
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 
 // Next.js
 import Image from "next/image";
-import { redirect, RedirectType } from "next/navigation";
+import { redirect } from "next/navigation";
 
 // Components
 import { Navbar } from "@/components";
@@ -15,10 +15,7 @@ import { useTheme } from "@/hooks";
 
 export default function Home() {
   const { theme } = useTheme();
-
-  const gradientStyle = "from-stone-800 to-stone-900";
   const brandSize = 150;
-  const brandSizeSmall = 20;
 
   return (
     <main className="overflow-hidden">
