@@ -18,9 +18,9 @@ export default function Navbar() {
         </div>
 
         {/* Center: Text Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
+        <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
           <InfiniteVendingText
-            className={`h-50 transition-colors duration-300  ${
+            className={`h-50 transition-colors duration-300 z-20  ${
               theme === "dark" ? "text-white" : "text-black"
             }`}
           />
