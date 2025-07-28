@@ -22,6 +22,27 @@ export default function Home() {
   const { theme } = useTheme();
   const brandSize = 150;
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Prevent default form submission behavior
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(e.currentTarget);
+
+    // Log form data to console
+    console.log("Form Data Submitted:", {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    });
+
+    // Reset the form after submission
+    e.currentTarget.reset();
+
+    // Optionally, you can handle form submission logic here
+    console.log("Form submitted");
+  };
+
   return (
     <main className="overflow-hidden">
       <Navbar />
@@ -59,7 +80,8 @@ export default function Home() {
               </span>
             </h1>
             <a
-              href="mailto:contact@infinitevending.com.au"
+              href="#contact"
+              // href="mailto:contact@infinitevending.com.au"
               className="bg-gradient-to-r from-red-500 to-orange-500  text-white font-semibold px-6 py-3 rounded-full hover:cursor-pointer hover:scale-105 transition-transform duration-300"
             >
               Get in Touch
@@ -178,32 +200,59 @@ export default function Home() {
         </section>
 
         {/* Contact Form */}
-        {/* <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white px-6 text-center transition duration-300">
-          <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-          <form className="w-full max-w-md space-y-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full px-4 py-2 rounded bg-stone-700 text-white"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full px-4 py-2 rounded bg-stone-700 text-white"
-            />
-            <input
-              type="text"
-              placeholder="Business Type / Location"
-              className="w-full px-4 py-2 rounded bg-stone-700 text-white"
-            />
-            <button
-              type="submit"
-              className="w-full bg-yellow-400 text-black font-semibold py-2 rounded hover:bg-yellow-500"
-            >
-              Submit
-            </button>
-          </form>
-        </section> */}
+        <section
+          id="contact"
+          className="snap-start h-lvh w-lvw  bg-cover bg-center shadow-lg text-white text-center"
+          style={{ backgroundImage: "url('/bg-4.jpg')" }}
+        >
+          {/* Overlay for better text visibility */}
+          <div
+            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
+              ${
+                theme === "dark"
+                  ? "backdrop-brightness-33"
+                  : "backdrop-brightness-50"
+              }
+            `}
+          >
+            <h2 className="text-3xl sm:text-5xl font-bold mb-8">
+              Get in Touch
+            </h2>
+
+            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
+
+            <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Name"
+                className="w-full p-4 rounded-full bg-white text-black"
+              />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                className="w-full p-4 rounded-full bg-white text-black"
+              />
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                rows={4}
+                cols={50}
+                className="w-full px-4 py-4 rounded-4xl bg-white text-black min-h-46 resize-none"
+              />
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold p-4 rounded-full hover:cursor-pointer scale-95 hover:scale-100 transition-transform duration-300"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
   );
