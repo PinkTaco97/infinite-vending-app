@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Navbar />
-      <div className="snap-y snap-mandatory h-dvh w-dvw overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
+      <div className="snap-y snap-mandatory h-lvh w-lvw overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
         {/* Hero Section */}
         <section
-          className="snap-start h-dvh w-dvw  bg-cover bg-center shadow-lg text-white text-center"
+          className="snap-start h-lvh w-lvw bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
           {/* Overlay for better text visibility */}
@@ -66,7 +66,7 @@ export default function Home() {
 
         {/* About Section */}
         <section
-          className="snap-start h-dvh w-dvw  bg-cover bg-center shadow-lg text-white text-center"
+          className="snap-start h-lvh w-lvw  bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg-8.jpg')" }}
         >
           <div
@@ -92,7 +92,7 @@ export default function Home() {
 
         {/* Product Gallery */}
         <section
-          className="snap-start h-dvh w-dvw  bg-cover bg-center relative bg-gradient-to-t from-slate-700 to-slate-800"
+          className="snap-start h-lvh w-lvw  bg-cover bg-center relative bg-gradient-to-t from-slate-700 to-slate-800"
           // style={{ backgroundImage: "url('/bg-5.jpg')" }}
         >
           {/* Parallax Snacks - Top */}
@@ -144,7 +144,7 @@ export default function Home() {
 
         {/* Why Choose Us */}
         <section
-          className="snap-start h-dvh w-dvw flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
+          className="snap-start h-lvh w-lvw flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
           style={{ backgroundImage: "url('/bg-7.jpg')" }}
         >
           {/* Overlay for better text visibility */}

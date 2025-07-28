@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "docker buildx build --platform linux/amd64 -t infinite-vending-app --load . && docker save -o ./output/infinite-vending-app.tar infinite-vending-app:latest"
+    "deploy": "docker buildx build --platform linux/amd64 -t infinite-vending-app --load . && docker save -o /Volumes/docker/images/infinite-vending-app/infinite-vending-app.tar infinite-vending-app:latest"
   },
   "dependencies": {
     "react": "19.1.0",

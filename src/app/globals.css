@@ -64,6 +64,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html,
+body {
+  height: 100lvh;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
