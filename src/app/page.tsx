@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Navbar />
-      <div className="snap-y snap-mandatory h-dvh w-dvh overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
+      <div className="snap-y snap-mandatory h-dvh w-dvw overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
         {/* Hero Section */}
         <section
           className="snap-start w-screen h-screen  bg-cover bg-center shadow-lg text-white text-center"
@@ -84,8 +84,8 @@ export default function Home() {
               Locally owned and operated in SEQ, Infinite Vending provides
               modern, efficient, and fully serviced vending solutions to
               offices, gyms, and schools. Our smart inventory system ensures
-              your machines are always stocked — so you never have to think
-              about it.
+              your machines are always stocked so you never have to think about
+              it.
             </p>
           </div>
         </section>
