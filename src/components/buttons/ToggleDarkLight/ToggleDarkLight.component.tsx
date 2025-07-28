@@ -2,9 +2,6 @@
 // React
 import React from "react";
 
-// Next.js
-import Image from "next/image";
-
 // Icons
 import { SunIcon, MoonIcon } from "@/components/icons";
 

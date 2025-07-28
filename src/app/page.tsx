@@ -5,7 +5,6 @@ import React from "react";
 
 // Next.js
 import Image from "next/image";
-import { redirect } from "next/navigation";
 
 // Components
 import { Navbar } from "@/components";
