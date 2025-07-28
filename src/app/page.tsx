@@ -12,6 +12,9 @@ import { Navbar } from "@/components";
 // Constants
 import { sellingPoints, brands } from "@/constants";
 
+// Icons
+import { CheckIcon } from "@/components/icons";
+
 // Hooks
 import { useTheme } from "@/hooks";
 
@@ -166,7 +169,7 @@ export default function Home() {
             <ul className="max-w-2xl text-left space-y-4 text-lg sm:text-xl font-semibold">
               {sellingPoints.map((item, id) => (
                 <li key={id} className="flex items-center gap-3">
-                  <span className="text-green-400 text-xl">✔</span>
+                  <CheckIcon className="h-6 w-6 text-green-400" />
                   <span>{item}</span>
                 </li>
               ))}
