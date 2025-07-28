@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
