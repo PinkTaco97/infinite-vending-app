@@ -26,9 +26,7 @@ export default function Home() {
       <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
         {/* Hero Section */}
         <section
-          className={`snap-start w-screen h-screen  bg-cover bg-center shadow-lg text-white text-center
-            ${theme === "dark" ? "" : ""}
-          `}
+          className="snap-start w-screen h-screen  bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
           {/* Overlay for better text visibility */}
@@ -50,7 +48,7 @@ export default function Home() {
                 quality
               </span>
               ,{" "}
-              <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
                 service
               </span>{" "}
               & {/* from-violet-600 to-indigo-600 */}
@@ -58,39 +56,40 @@ export default function Home() {
                 convenience
               </span>
             </h1>
-            {/* <p className="text-lg md:text-xl mb-6">
-              Reliable, contactless vending machines tailored for your business
-            </p> */}
-            <button
+            <a
+              href="mailto:contact@infinitevending.com.au"
               className="bg-gradient-to-r from-red-500 to-orange-500  text-white font-semibold px-6 py-3 rounded-full hover:cursor-pointer hover:scale-105 transition-transform duration-300"
-              onClick={() => redirect("mailto:contact@infinitevending.com.au")}
             >
               Get in Touch
-            </button>
+            </a>
           </div>
         </section>
 
         {/* About Section */}
-        {/* <section className="bg-background snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-text px-6 text-center transition duration-300">
-          <h2 className="text-3xl font-bold mb-4">About Infinite Vending</h2>
-          <p className="max-w-2xl text-center text-lg">
-            Locally owned and operated in SEQ, Infinite Vending provides modern,
-            efficient, and fully serviced vending solutions to offices, gyms,
-            and schools. Our smart inventory system ensures your machines are
-            always stocked — so you never have to think about it.
-          </p>
-        </section> */}
-
-        {/* How It Works Section */}
-        {/* <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-text px-6 text-center transition duration-300">
-          <h2 className="text-3xl font-bold mb-6">How It Works</h2>
-          <ol className="space-y-4 text-lg max-w-xl">
-            <li>1. We deliver and install for free</li>
-            <li>2. You choose the products you want</li>
-            <li>3. We monitor and restock remotely</li>
-            <li>4. You earn commission (optional)</li>
-          </ol>
-        </section> */}
+        <section
+          className="snap-start w-screen h-screen  bg-cover bg-center shadow-lg text-white text-center"
+          style={{ backgroundImage: "url('/bg-8.jpg')" }}
+        >
+          <div
+            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
+              ${
+                theme === "dark"
+                  ? "backdrop-brightness-33"
+                  : "backdrop-brightness-50"
+              }
+            `}
+          >
+            <h2 className="text-3xl sm:text-5xl font-bold mb-8">About Us</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
+            <p className="max-w-2xl text-center text-lg sm:text-xl font-semibold">
+              Locally owned and operated in SEQ, Infinite Vending provides
+              modern, efficient, and fully serviced vending solutions to
+              offices, gyms, and schools. Our smart inventory system ensures
+              your machines are always stocked — so you never have to think
+              about it.
+            </p>
+          </div>
+        </section>
 
         {/* Product Gallery */}
         <section
@@ -172,16 +171,6 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            {/* <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-white text-center">
-              We Do More Than Just Stock Snacks
-            </h2>
-            <ul className="max-w-xl space-y-2 text-lg sm:text-1xl list-none font-bold">
-              <li>24/7 Monitoring</li>
-              <li>Custom Product Selection</li>
-              <li>Modern Cashless Payments</li>
-              <li>Fast Restocking Guarantee</li>
-              <li>Local SEQ Support</li>
-            </ul> */}
           </div>
         </section>
 
