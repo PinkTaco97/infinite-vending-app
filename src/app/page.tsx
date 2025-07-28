@@ -148,11 +148,11 @@ export default function Home() {
         {/* Why Choose Us */}
         <section
           className="snap-start h-lvh w-lvw flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
-          style={{ backgroundImage: "url('/bg-7.jpg')" }}
+          style={{ backgroundImage: "url('/bg-10.jpg')" }}
         >
           {/* Overlay for better text visibility */}
           <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
+            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300 backdrop-blur-[5px]
               ${
                 theme === "dark"
                   ? "backdrop-brightness-33"
