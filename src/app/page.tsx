@@ -188,16 +188,32 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        {/* <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white px-6 text-center transition duration-300">
-          <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
-          <ul className="list-disc max-w-xl space-y-2 text-lg">
-            <li>24/7 Monitoring</li>
-            <li>Custom Product Selection</li>
-            <li>Modern Cashless Payments</li>
-            <li>Fast Restocking Guarantee</li>
-            <li>Local SEQ Support</li>
-          </ul>
-        </section> */}
+        <section
+          className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
+          style={{ backgroundImage: "url('/bg-6.jpg')" }}
+        >
+          {/* Overlay for better text visibility */}
+          <div
+            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
+              ${
+                theme === "dark"
+                  ? "backdrop-brightness-33"
+                  : "backdrop-brightness-50"
+              }
+            `}
+          >
+            <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-white text-center">
+              We Do More Than Just Stock Snacks
+            </h2>
+            <ul className="max-w-xl space-y-2 text-lg sm:text-1xl list-none font-bold">
+              <li>24/7 Monitoring</li>
+              <li>Custom Product Selection</li>
+              <li>Modern Cashless Payments</li>
+              <li>Fast Restocking Guarantee</li>
+              <li>Local SEQ Support</li>
+            </ul>
+          </div>
+        </section>
 
         {/* Contact Form */}
         {/* <section className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white px-6 text-center transition duration-300">

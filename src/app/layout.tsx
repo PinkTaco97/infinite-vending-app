@@ -31,6 +31,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/logo.ico" />
       </head>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
