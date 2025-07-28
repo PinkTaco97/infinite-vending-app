@@ -70,7 +70,7 @@ export default function Home() {
         {/* About Section */}
         <section
           className="snap-start h-lvh w-lvw  bg-cover bg-center shadow-lg text-white text-center"
-          style={{ backgroundImage: "url('/bg-8.jpg')" }}
+          style={{ backgroundImage: "url('/bg-2.jpg')" }}
         >
           <div
             className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
@@ -148,11 +148,11 @@ export default function Home() {
         {/* Why Choose Us */}
         <section
           className="snap-start h-lvh w-lvw flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
-          style={{ backgroundImage: "url('/bg-10.jpg')" }}
+          style={{ backgroundImage: "url('/bg-3.jpg')" }}
         >
           {/* Overlay for better text visibility */}
           <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300 backdrop-blur-[5px]
+            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
               ${
                 theme === "dark"
                   ? "backdrop-brightness-33"
