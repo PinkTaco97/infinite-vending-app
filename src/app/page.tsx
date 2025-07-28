@@ -10,6 +10,9 @@ import { redirect } from "next/navigation";
 // Components
 import { Navbar } from "@/components";
 
+// Constants
+import { sellingPoints, brands } from "@/constants";
+
 // Hooks
 import { useTheme } from "@/hooks";
 
@@ -127,62 +130,15 @@ export default function Home() {
               Always Stocked
             </h2>
             <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 sm:gap-6 max-w-4xl">
-              <Image
-                src="/brands/Coke.png"
-                alt="Product 1"
-                width={brandSize}
-                height={brandSize}
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-              />
-              <Image
-                src="/brands/Pepsi.png"
-                alt="Product 2"
-                width={brandSize}
-                height={brandSize}
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-              />
-              <Image
-                src="/brands/Smiths.png"
-                alt="Product 3"
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-                width={brandSize}
-                height={brandSize}
-              />
-              <Image
-                src="/brands/Red Rock Deli.png"
-                alt="Product 3"
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-                width={brandSize}
-                height={brandSize}
-              />
-              <Image
-                src="/brands/Cadbury.png"
-                alt="Product 3"
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-                width={brandSize}
-                height={brandSize}
-              />
-              <Image
-                src="/brands/V Energy.png"
-                alt="Product 3"
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-                width={brandSize}
-                height={brandSize}
-              />
-              <Image
-                src="/brands/Monster.png"
-                alt="Product 3"
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-                width={brandSize}
-                height={brandSize}
-              />
-              <Image
-                src="/brands/Mother.png"
-                alt="Product 3"
-                className={`bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full`}
-                width={brandSize}
-                height={brandSize}
-              />
+              {brands.map((item) => (
+                <Image
+                  src={`/brands/${item}.png`}
+                  alt={item}
+                  width={brandSize}
+                  height={brandSize}
+                  className="bg-background rounded-full shadow-lg bg-cover bg-center size-[75] sm:size-full"
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -190,7 +146,7 @@ export default function Home() {
         {/* Why Choose Us */}
         <section
           className="snap-start w-screen h-screen flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
-          style={{ backgroundImage: "url('/bg-6.jpg')" }}
+          style={{ backgroundImage: "url('/bg-7.jpg')" }}
         >
           {/* Overlay for better text visibility */}
           <div
@@ -202,7 +158,21 @@ export default function Home() {
               }
             `}
           >
-            <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-white text-center">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-8">
+              We Do More Than Just Stock Snacks
+            </h2>
+
+            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
+
+            <ul className="max-w-2xl text-left space-y-4 text-lg sm:text-xl font-semibold">
+              {sellingPoints.map((item, id) => (
+                <li key={id} className="flex items-center gap-3">
+                  <span className="text-green-400 text-xl">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            {/* <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-white text-center">
               We Do More Than Just Stock Snacks
             </h2>
             <ul className="max-w-xl space-y-2 text-lg sm:text-1xl list-none font-bold">
@@ -211,7 +181,7 @@ export default function Home() {
               <li>Modern Cashless Payments</li>
               <li>Fast Restocking Guarantee</li>
               <li>Local SEQ Support</li>
-            </ul>
+            </ul> */}
           </div>
         </section>
 
