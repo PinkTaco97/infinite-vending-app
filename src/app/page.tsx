@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Navbar />
-      <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
+      <div className="snap-y snap-mandatory h-dvh w-dvh overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
         {/* Hero Section */}
         <section
           className="snap-start w-screen h-screen  bg-cover bg-center shadow-lg text-white text-center"
