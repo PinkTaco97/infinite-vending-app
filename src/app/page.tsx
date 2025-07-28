@@ -130,6 +130,7 @@ export default function Home() {
             <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 sm:gap-6 max-w-4xl">
               {brands.map((item) => (
                 <Image
+                  key={item}
                   src={`/brands/${item}.png`}
                   alt={item}
                   width={brandSize}
