@@ -13,8 +13,8 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 w-full p-4">
       <div className="relative m-auto px-4 max-w-4xl w-full h-16 flex items-center justify-between rounded-full bg-background transition-colors duration-300">
         {/* Left: Icon Logo */}
-        <div className="flex items-center space-x-2 z-10">
-          <InfiniteVendingIcon className="h-25" />
+        <div className="flex items-center pl-1 z-10">
+          <InfiniteVendingIcon className="h-15 sm:h-25" />
         </div>
 
         {/* Center: Text Logo */}
