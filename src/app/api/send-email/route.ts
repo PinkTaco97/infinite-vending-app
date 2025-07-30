@@ -8,6 +8,9 @@ export async function POST(req: Request) {
   // get form data from the request
   const { name, email, message } = await req.json();
 
+  // log the received data
+  console.log("Received form data:", { name, email, message });
+
   // check if all required fields are present
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -36,6 +39,9 @@ export async function POST(req: Request) {
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message:\n${message}</p>`,
     });
+
+    // Log the error and return a failure response
+    console.info("Email sent successfully");
 
     // Return success response
     return NextResponse.json(

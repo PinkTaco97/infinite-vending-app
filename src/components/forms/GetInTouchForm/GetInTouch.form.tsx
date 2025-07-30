@@ -27,6 +27,8 @@ export default function GetInTouchForm() {
     // Prevent default form submission behavior
     e.preventDefault();
 
+    setShowAlert(false);
+
     // Send form data to the API
     const res = await fetch("/api/send-email", {
       method: "POST",

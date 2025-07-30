@@ -17,7 +17,7 @@ export default function Alert({
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAnimateOut(true);
-      setTimeout(() => setShow(false), 300); // match your fade-out-up duration
+      setTimeout(() => setShow(false), 300);
     }, duration);
 
     return () => clearTimeout(timeout);
@@ -27,7 +27,7 @@ export default function Alert({
 
   return (
     <div
-      className={`fixed top-25 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full shadow-lg z-50 text-white
+      className={`fixed top-25 left-1/2 transform -translate-x-1/2 max-w-sm w-full px-4 py-2 rounded-full shadow-lg z-50 text-white font-bold
         ${type === "success" ? "bg-green-500" : "bg-red-500"}
         ${animateOut ? "animate-fade-out-up" : "animate-fade-in-down"}`}
     >
