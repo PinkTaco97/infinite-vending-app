@@ -4,9 +4,9 @@ import React, { useState } from "react";
 export default function GetInTouchForm() {
   // State to manage form data
   const [formData, setFormData] = useState({
-    name: "Test",
-    email: "test@test.com",
-    message: "Hello Infinite Vending, this is a test message!",
+    name: "",
+    email: "",
+    message: "",
   });
 
   // Handle input changes
