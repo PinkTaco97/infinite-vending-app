@@ -12,6 +12,9 @@ import { Navbar } from "@/components";
 // Constants
 import { sellingPoints, brands } from "@/constants";
 
+// Forms
+import { GetInTouchForm } from "@/components/forms";
+
 // Icons
 import { CheckIcon } from "@/components/icons";
 
@@ -21,27 +24,6 @@ import { useTheme } from "@/hooks";
 export default function Home() {
   const { theme } = useTheme();
   const brandSize = 150;
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Prevent default form submission behavior
-    e.preventDefault();
-
-    // Get form data
-    const formData = new FormData(e.currentTarget);
-
-    // Log form data to console
-    console.log("Form Data Submitted:", {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    });
-
-    // Reset the form after submission
-    e.currentTarget.reset();
-
-    // Optionally, you can handle form submission logic here
-    console.log("Form submitted");
-  };
 
   return (
     <main className="overflow-hidden">
@@ -221,36 +203,7 @@ export default function Home() {
 
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
 
-            <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Name"
-                className="w-full p-4 rounded-full bg-white text-black"
-              />
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Email"
-                className="w-full p-4 rounded-full bg-white text-black"
-              />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-                rows={4}
-                cols={50}
-                className="w-full px-4 py-4 rounded-4xl bg-white text-black min-h-46 resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold p-4 rounded-full hover:cursor-pointer scale-95 hover:scale-100 transition-transform duration-300"
-              >
-                Submit
-              </button>
-            </form>
+            <GetInTouchForm />
           </div>
         </section>
       </div>
