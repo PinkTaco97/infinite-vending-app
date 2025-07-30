@@ -21,20 +21,6 @@ const config: Config = {
         secondary: "var(--secondary)",
         ["secondary-hover"]: "var(--secondary-hover)",
       },
-      keyframes: {
-        "fade-in-down": {
-          "0%": { opacity: "0", transform: "translateY(-25px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-out-up": {
-          "0%": { opacity: "1", transform: "translateY(0)" },
-          "100%": { opacity: "0", transform: "translateY(-25px)" },
-        },
-      },
-      animation: {
-        "fade-in-down": "fade-in-down 0.3s ease-out forwards",
-        "fade-out-up": "fade-out-up 0.3s ease-in forwards",
-      },
     },
   },
   darkMode: "class",
