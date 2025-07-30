@@ -27,9 +27,9 @@ export default function Navbar() {
         </div>
 
         {/* Right: Theme Toggle */}
-        <div className="z-10">
+        {/* <div className="z-10">
           <ToggleDarkLight />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

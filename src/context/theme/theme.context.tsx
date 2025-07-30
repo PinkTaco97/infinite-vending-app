@@ -18,7 +18,7 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(
 
 // ThemeProvider component to provide theme context
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useLocalStorage<Theme>("theme", getSystemTheme());
+  const [theme, setTheme] = useLocalStorage<Theme>("theme", "dark"); //getSystemTheme());
 
   // Apply theme to document root
   useEffect(() => {
