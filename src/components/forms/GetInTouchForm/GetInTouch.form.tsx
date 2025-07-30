@@ -43,7 +43,7 @@ export default function GetInTouchForm() {
     setShowAlert(true);
 
     // Reset the form after submission
-    e.currentTarget.reset();
+    (e.target as HTMLFormElement).reset();
   };
 
   return (
