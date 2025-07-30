@@ -44,11 +44,10 @@ export default function Home() {
               }
             `}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-10">
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 max-w-4xl w-full">
               {/* Vending Machines for Modern Workspaces */}
               {/* The Future of Vending.<br />Delivered Today. */}
-              Your trusted vending partner for
-              <br />
+              Your trusted vending partner for {""}
               <span className="bg-gradient-to-r from-lime-400 to-green-500 bg-clip-text text-transparent">
                 quality
               </span>
@@ -85,7 +84,7 @@ export default function Home() {
               }
             `}
           >
-            <h2 className="text-3xl sm:text-5xl font-bold mb-8">About Us</h2>
+            <h2 className="text-5xl font-bold mb-4">About Us</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
             <p className="max-w-2xl text-center text-lg sm:text-xl font-semibold">
               Locally owned and operated in SEQ, Infinite Vending provides
@@ -129,11 +128,12 @@ export default function Home() {
               }
             `}
           >
-            <h2 className="text-3xl sm:text-5xl font-bold mb-10 text-white text-center">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white text-center">
               Your Favorite Brands
               <br />
               Always Stocked
             </h2>
+            <div className="w-72 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-8" />
             <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 sm:gap-6 max-w-4xl">
               {brands.map((item) => (
                 <Image
@@ -164,11 +164,11 @@ export default function Home() {
               }
             `}
           >
-            <h2 className="text-3xl sm:text-5xl font-bold mb-8">
-              We Do More Than Just Stock Snacks
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              We Do More Than Just <br /> Stock Snacks
             </h2>
 
-            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
+            <div className="w-48 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
 
             <ul className="max-w-2xl text-left space-y-4 text-lg sm:text-xl font-semibold">
               {sellingPoints.map((item, id) => (
@@ -197,11 +197,9 @@ export default function Home() {
               }
             `}
           >
-            <h2 className="text-3xl sm:text-5xl font-bold mb-8">
-              Get in Touch
-            </h2>
+            <h2 className="text-5xl font-bold mb-4">Get in Touch</h2>
 
-            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
+            <div className="w-48 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
 
             <GetInTouchForm />
           </div>
