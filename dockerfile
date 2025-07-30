@@ -55,6 +55,9 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT=3000
+ENV SMTP_USER
+ENV SMTP_PASS
+ENV RECIPIENT_EMAIL
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/config/next-config-js/output
