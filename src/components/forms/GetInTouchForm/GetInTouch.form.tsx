@@ -5,12 +5,14 @@ import React, { useState } from "react";
 import { Alert } from "@/components/common";
 
 export default function GetInTouchForm() {
-  // State to manage form data
-  const [formData, setFormData] = useState({
+  const defaultFormData = {
     name: "",
     email: "",
     message: "",
-  });
+  };
+
+  // State to manage form data
+  const [formData, setFormData] = useState(defaultFormData);
 
   // State to manage alert visibility and type
   const [showAlert, setShowAlert] = useState(false);
@@ -43,7 +45,7 @@ export default function GetInTouchForm() {
     setShowAlert(true);
 
     // Reset the form after submission
-    (e.target as HTMLFormElement).reset();
+    if (res.ok) setFormData(defaultFormData);
   };
 
   return (
