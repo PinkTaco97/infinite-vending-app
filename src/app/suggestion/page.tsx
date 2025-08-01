@@ -18,7 +18,7 @@ import { useTheme } from "@/hooks";
 export default function SuggestionPage() {
   const { theme } = useTheme();
   const searchParams = useSearchParams();
-  const location = searchParams.get("location");
+  const location = searchParams.get("location") || undefined;
   const brandSize = 150;
 
   console.log("Location:", location);
@@ -41,7 +41,7 @@ export default function SuggestionPage() {
 
             <div className="w-48 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
 
-            <SuggestionForm location={location || undefined} />
+            <SuggestionForm location={location} />
           </Overlay>
         </section>
       </div>

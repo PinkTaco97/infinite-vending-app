@@ -37,7 +37,7 @@ export default function SuggestionForm({
     setShowAlert(false);
 
     // Send form data to the API
-    const res = await fetch("/api/send-email", {
+    const res = await fetch("/api/send-suggestion", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
