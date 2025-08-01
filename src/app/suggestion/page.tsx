@@ -7,7 +7,7 @@ import React from "react";
 import { useSearchParams } from "next/navigation";
 
 // Components
-import { Navbar } from "@/components";
+import { Navbar, Overlay } from "@/components";
 
 // Forms
 import { SuggestionForm } from "@/components/forms";
@@ -27,22 +27,13 @@ export default function SuggestionPage() {
     <main className="overflow-hidden">
       <Navbar />
       <div className="snap-y snap-mandatory h-lvh w-lvw overflow-y-scroll overflow-x-hidden scroll-smooth overscroll-contain">
-        {/* Contact Form */}
+        {/* Suggestion Form */}
         <section
-          id="contact"
           className="snap-start h-lvh w-lvw  bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
           {/* Overlay for better text visibility */}
-          <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
-              ${
-                theme === "dark"
-                  ? "backdrop-brightness-33"
-                  : "backdrop-brightness-50"
-              }
-            `}
-          >
+          <Overlay>
             <h2 className="text-5xl font-bold mb-4">
               Have a<br />
               Suggestion?
@@ -51,7 +42,7 @@ export default function SuggestionPage() {
             <div className="w-48 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
 
             <SuggestionForm location={location || undefined} />
-          </div>
+          </Overlay>
         </section>
       </div>
     </main>

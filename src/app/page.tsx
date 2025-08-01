@@ -7,7 +7,7 @@ import React from "react";
 import Image from "next/image";
 
 // Components
-import { Navbar } from "@/components";
+import { Navbar, Overlay } from "@/components";
 
 // Constants
 import { sellingPoints, brands } from "@/constants";
@@ -34,16 +34,7 @@ export default function Home() {
           className="snap-start h-lvh w-lvw bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
-          {/* Overlay for better text visibility */}
-          <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
-              ${
-                theme === "dark"
-                  ? "backdrop-brightness-33"
-                  : "backdrop-brightness-50"
-              }
-            `}
-          >
+          <Overlay>
             <h1 className="text-5xl md:text-6xl font-bold mb-8 max-w-4xl w-full">
               {/* Vending Machines for Modern Workspaces */}
               {/* The Future of Vending.<br />Delivered Today. */}
@@ -67,7 +58,7 @@ export default function Home() {
             >
               Get in Touch
             </a>
-          </div>
+          </Overlay>
         </section>
 
         {/* About Section */}
@@ -75,15 +66,7 @@ export default function Home() {
           className="snap-start h-lvh w-lvw  bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg-2.jpg')" }}
         >
-          <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
-              ${
-                theme === "dark"
-                  ? "backdrop-brightness-33"
-                  : "backdrop-brightness-50"
-              }
-            `}
-          >
+          <Overlay>
             <h2 className="text-5xl font-bold mb-4">About Us</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
             <p className="max-w-2xl text-center text-lg sm:text-xl font-semibold">
@@ -93,7 +76,7 @@ export default function Home() {
               your machines are always stocked so you never have to think about
               it.
             </p>
-          </div>
+          </Overlay>
         </section>
 
         {/* Product Gallery */}
@@ -119,15 +102,7 @@ export default function Home() {
             className="absolute bottom-0 left-0 min-w-[1000] w-full h-auto object-bottom parallax"
           />
           {/* Overlay for better text visibility */}
-          <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300 z-10
-              ${
-                theme === "dark"
-                  ? "backdrop-brightness-33"
-                  : "backdrop-brightness-50"
-              }
-            `}
-          >
+          <Overlay>
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white text-center">
               Your Favorite Brands
               <br />
@@ -146,7 +121,7 @@ export default function Home() {
                 />
               ))}
             </div>
-          </div>
+          </Overlay>
         </section>
 
         {/* Why Choose Us */}
@@ -154,16 +129,7 @@ export default function Home() {
           className="snap-start h-lvh w-lvw flex flex-col items-center justify-center bg-cover bg-center shadow-lg text-white text-center transition duration-300"
           style={{ backgroundImage: "url('/bg-3.jpg')" }}
         >
-          {/* Overlay for better text visibility */}
-          <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
-              ${
-                theme === "dark"
-                  ? "backdrop-brightness-33"
-                  : "backdrop-brightness-50"
-              }
-            `}
-          >
+          <Overlay>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
               We Do More Than Just <br /> Stock Snacks
             </h2>
@@ -178,7 +144,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Overlay>
         </section>
 
         {/* Contact Form */}
@@ -187,22 +153,11 @@ export default function Home() {
           className="snap-start h-lvh w-lvw  bg-cover bg-center shadow-lg text-white text-center"
           style={{ backgroundImage: "url('/bg-4.jpg')" }}
         >
-          {/* Overlay for better text visibility */}
-          <div
-            className={`w-full h-full px-6 flex flex-col items-center justify-center transition-all duration-300
-              ${
-                theme === "dark"
-                  ? "backdrop-brightness-33"
-                  : "backdrop-brightness-50"
-              }
-            `}
-          >
+          <Overlay>
             <h2 className="text-5xl font-bold mb-4">Get in Touch</h2>
-
             <div className="w-48 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-10" />
-
             <GetInTouchForm />
-          </div>
+          </Overlay>
         </section>
       </div>
     </main>
